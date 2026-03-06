@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RL Peek Painting – Next.js Website
+
+Next.js 16 app for [RL Peek Painting](https://www.rlpeekpainting.com), optimized for **SEO** and **AEO** (Answer Engine Optimization). Content is sourced from the live site via scrape scripts and stored in `content/*.json`.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **`npm run scrape`** – Fetches all pages from rlpeekpainting.com using the sitemap and saves HTML to `scraped/html/` and a manifest to `scraped/manifest.json`. Run once (or when you want to refresh content). Requires network.
+- **`npm run extract`** – Parses scraped HTML and builds `content/*.json` (all, services, service-areas, tips, projects). Run after `scrape` if you’ve re-scraped.
+- **`npm run build`** – Production build. Uses `content/*.json`; ensure you’ve run `scrape` and `extract` at least once so `content/` exists.
 
-## Learn More
+## Image Assets
 
-To learn more about Next.js, take a look at the following resources:
+Image placeholders are used for logo, hero, and project photos. See **[IMAGE_TODOS.md](IMAGE_TODOS.md)** for the list of assets to provide and where to put them (`public/images/`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## SEO & AEO
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Metadata**: Unique title/description and canonical URL per page.
+- **Sitemap**: `/sitemap.xml` generated from content; human-readable list at `/site-map`.
+- **robots.txt**: Allows crawlers and points to the sitemap.
+- **JSON-LD**: LocalBusiness (root layout), FAQPage (home and pages with FAQs), Article (tips and projects), BreadcrumbList (inner pages).
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/` – Routes (home, about-us, contact-us, services, service-areas, home-painting-tips, latest-projects, reviews, meet-the-team, employment, privacy, terms, site-map) and dynamic segments.
+- `components/` – Header, Footer, PageContent, Breadcrumbs, LocalBusinessJsonLd.
+- `content/` – JSON content index (from `npm run extract`).
+- `lib/` – `site.ts` (config), `content.ts` (content loaders).
+- `scripts/` – `scrape-site.mjs`, `extract-content.mjs`.

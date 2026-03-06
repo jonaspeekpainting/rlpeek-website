@@ -1,0 +1,486 @@
+[
+    {
+        "path": "services/interior-services",
+        "slug": "interior-services",
+        "title": "Our Park City Interior Painting Services - House Painters, Painting Contractor in Park City, UT",
+        "displayTitle": "Interior Painting Services",
+        "description": "RL Peek Painting is a Park City painter who provides interior painting services for your home including power washing and pressure washing home interiors. Contact our house painters at 435-649-0158.",
+        "images": [
+            {
+                "src": "images/services/interior-painting.png",
+                "alt": "Interior painting and finishing in a Park City home"
+            }
+        ],
+        "faq": [
+            {
+                "question": "Interior Painting",
+                "answer": "While exterior painting can boost curb appeal, professional interior painting in Park City, Utah is one of the most cost-effective ways to refresh your home. [Read more about Interior Painting](/services/interior-services/painting)."
+            },
+            {
+                "question": "Interior Staining",
+                "answer": "Our wood staining experts help homeowners protect and enhance natural wood. [Read more about Interior Staining](/services/interior-services/staining)."
+            },
+            {
+                "question": "Drywall Repair",
+                "answer": "Professional drywall repair restores the appearance and integrity of your walls. [Read more about Drywall Repair](/services/interior-services/drywall-repair)."
+            },
+            {
+                "question": "Cabinetry & Wood Refinishing",
+                "answer": "Custom cabinet and wood refinishing can restore your existing woodwork. [Read more about Cabinetry & Wood Refinishing](/services/interior-services/cabinetry-wood-refinishing)."
+            }
+        ],
+        "intro": "RL Peek Painting offers a wide range of interior painting services and we approach every project with the highest level of quality craftsmanship you would expect. With our attention to detail, you can count on us to deliver top quality services at a price that you can afford.\n\nYour Park City paint job is carefully evaluated for special conditions and requirements before your estimate is prepared so you know exactly what you are getting."
+    },
+    {
+        "path": "services/exterior-services",
+        "slug": "exterior-services",
+        "title": "Our Park City Painting Services - House Painters, Interior Painting, Exterior Painting",
+        "displayTitle": "Exterior Painting Services",
+        "description": "RL Peek Painting is a Park City painter who offers exterior painting services for your home as well as power washing and pressure washing home exteriors.",
+        "images": [
+            {
+                "src": "images/services/exterior-painting.jpg",
+                "alt": "Exterior painting and staining on a Park City home"
+            }
+        ],
+        "faq": [
+            {
+                "question": "Exterior Painting",
+                "answer": "Professional exterior painting improves curb appeal and protects your home. [Read more about Exterior Painting](/services/exterior-services/painting)."
+            },
+            {
+                "question": "Exterior Staining",
+                "answer": "We specialize in enhancing and protecting wood surfaces with high-quality stain. [Read more about Exterior Staining](/services/exterior-services/staining)."
+            }
+        ],
+        "intro": "RL Peek Painting offers a wide range of exterior painting services and we approach every project with the highest level of quality craftsmanship you would expect. With our attention to detail, you can count on us to deliver top quality services at a price that you can afford.\n\nYour Park City paint job is carefully evaluated for special conditions and requirements before your estimate is prepared so you know exactly what you are getting."
+    },
+    {
+        "path": "services/interior-services/painting",
+        "slug": "painting",
+        "title": "Interior Painting Park City - House Painting, Interior Paint,Oakley, Heber",
+        "displayTitle": "Interior Painting",
+        "description": "RL Peek Painting is a Park City painting contractor who provides home improvement services like interior painting.",
+        "images": [
+            {
+                "src": "images/services/interior-painting.png",
+                "alt": "Professional interior wall and trim painting"
+            }
+        ],
+        "faq": [
+            {
+                "question": "Professional Interior Painting Services in Park City, UT",
+                "answer": "At RL Peek Painting, we provide detailed, high-quality interior painting services for homeowners throughout Park City and surrounding Utah communities. From walls and ceilings to trim, doors, and accent features, our goal is to deliver a clean finish that looks beautiful and lasts for years.\n\nWe take care of the entire process including surface prep, patching minor wall imperfections, protecting floors and furniture, and applying premium coatings for a smooth, even result."
+            },
+            {
+                "question": "Why Park City Homeowners Hire RL Peek Painting",
+                "answer": "Our professional painters and color consultant help you choose the best colors and finishes for your space, lifestyle, and lighting. We start every project with a walkthrough and detailed plan so you know exactly what to expect before we begin.\n\nWe're known for clean work, sharp lines, consistent coverage, and a final result that looks polished and professional. Whether you're going for a bright modern update or a warm mountain-home feel, we bring the craftsmanship and attention to detail needed to bring your vision to life.\n\nIf you're looking for a reliable team for interior house painting in Park City, contact us today to schedule your estimate."
+            },
+            {
+                "question": "Recent Interior Painting Tips & Tricks",
+                "answer": "See our latest painting tips and how-to articles for your home."
+            },
+            {
+                "question": "Latest Interior Painting Projects",
+                "answer": "View our [latest interior painting projects](/latest-projects) to see recent work."
+            }
+        ],
+        "intro": "While [exterior painting](/services/exterior-services/painting) can boost curb appeal, professional interior painting in Park City, Utah is one of the most cost-effective ways to refresh your home, improve comfort, and increase property value. Whether you're updating a single room or repainting the entire interior, a quality paint job instantly makes a home feel cleaner, brighter, and more modern.\n\nInterior painting is also a smart upgrade if you're preparing to sell. Neutral tones, smooth finishes, and professionally painted trim can make a strong first impression during showings and help your home stand out in a competitive market.",
+        "faqItems": [
+            {
+                "question": "How long does interior painting typically take?",
+                "answer": "Most interior painting projects take between a few days and a week depending on the size of the space, surface preparation needs, and the number of rooms being painted. Professional painters first inspect the areas, complete any necessary prep work, and then apply multiple coats to ensure a smooth, long-lasting finish."
+            },
+            {
+                "question": "Does interior painting increase home value?",
+                "answer": "Yes. A fresh interior paint job is one of the most cost-effective ways to improve a home's appearance and boost its market value. Many homeowners choose interior painting before selling because it creates a clean, updated look that appeals to buyers."
+            },
+            {
+                "question": "How do I choose the right paint colors for my home?",
+                "answer": "Professional painters can help you select colors that match your lighting, style preferences, and overall home design. During the consultation, they evaluate your space and recommend options that will achieve your desired look while enhancing the home's interior."
+            }
+        ]
+    },
+    {
+        "path": "services/interior-services/staining",
+        "slug": "staining",
+        "title": "Staining Park City - Wood Finish, Wood Finishing",
+        "displayTitle": "Interior Staining",
+        "description": "RL Peek Painting is a Park City painting contractor that offers wood staining services for your Utah home.",
+        "images": [
+            {
+                "src": "images/services/interior-staining-park-city-ut.jpg",
+                "alt": "Wood staining on interior trim and cabinetry"
+            }
+        ],
+        "faq": [
+            {
+                "question": "Professional Wood Staining Services in Park City, UT",
+                "answer": "From new wood that needs sealing to existing surfaces that require refreshing, we focus on the prep work that makes the difference: cleaning, sanding, conditioning (when needed), and careful application for a smooth, consistent finish. If your project includes restoration or refinishing, our experienced [wood finishing](/services/interior-services/cabinetry-wood-refinishing) team can help bring worn wood back to life.\n\nYou can expect clear communication, on-time arrival, and a tidy job site. We're happy to answer questions throughout the process and make sure you feel confident about the products, color, sheen, and maintenance recommendations."
+            },
+            {
+                "question": "Why Park City Homeowners Hire Us for Wood Staining",
+                "answer": "We start with a walkthrough to understand your goals, inspect the wood's condition, and recommend the best approach for your home. Then we lay out a straightforward plan so you know exactly what will be done—prep, stain selection, application method, and final protective topcoat (if needed).\n\nOur team combines craftsmanship with technical know-how to deliver clean edges, consistent tone, and a professional finish you'll be proud to show off. If you're looking for reliable wood staining in Park City, contact us today to schedule an estimate."
+            }
+        ],
+        "intro": "Our wood staining experts help homeowners protect and enhance natural wood with professional stain application that looks great and lasts. Whether you're updating interior trim, doors, railings, beams, or exterior wood surfaces, we use proven techniques to achieve rich color, even coverage, and a durable finish.\n\nWith experience across a wide range of stain types—transparent, semi-transparent, solid, oil-based, and water-based—we'll guide you toward the best product for your goals, wood species, and exposure conditions. The result is a finish that highlights the wood's character while adding long-term protection against wear, sunlight, and moisture.",
+        "faqItems": [
+            {
+                "question": "What types of wood surfaces can be professionally stained?",
+                "answer": "Professional staining can be applied to a wide range of interior wood surfaces, including trim, doors, railings, beams, and cabinetry. Staining enhances the natural appearance of the wood while providing long-term protection against wear and environmental exposure."
+            },
+            {
+                "question": "Why is preparation important before staining wood?",
+                "answer": "Proper preparation ensures the stain absorbs evenly and lasts longer. This process typically includes cleaning, sanding, conditioning when needed, and selecting the correct stain type based on the wood species and project goals."
+            },
+            {
+                "question": "What types of wood stains are available?",
+                "answer": "There are several stain options, including transparent, semi-transparent, solid, oil-based, and water-based finishes. A professional contractor helps homeowners choose the best product based on durability needs, desired appearance, and environmental exposure."
+            }
+        ]
+    },
+    {
+        "path": "services/interior-services/drywall-repair",
+        "slug": "drywall-repair",
+        "title": "Sheetrock Repairs Park City - Sheetrock, Dry Wall",
+        "displayTitle": "Drywall Repair",
+        "description": "RL Peek Painting is a Park City painting contractor that offers painting services as well as sheetrock and drywall repairs.",
+        "images": [
+            {
+                "src": "images/services/drywall-repair-park-city-ut.jpg",
+                "alt": "Drywall repair and patching before painting"
+            }
+        ],
+        "faq": [],
+        "intro": "Drywall—also known as sheetrock or gypsum board—is one of the most common materials used for interior walls and ceilings in modern homes. It provides a smooth, clean surface that is ideal for painting, texturing, and finishing. Because drywall installs efficiently and requires less labor than traditional plaster, it has become the preferred choice for many residential and commercial interiors.\n\nWhen drywall becomes damaged from settling, moisture, accidents, or everyday wear, professional repairs are important to restore the appearance and integrity of your walls. Our painting professionals provide high-quality drywall repair services that blend seamlessly into the existing surface—so once we're done, you won't be able to tell there was ever damage.\n\nDrywall is also commonly used to patch or repair older plaster walls, especially when holes or cracks are too large for standard spackling or joint compound fixes. After repairs are complete, we can prepare the surface for painting, apply texture matching, and ensure the final finish looks smooth, consistent, and ready for any style of interior design.",
+        "faqItems": [
+            {
+                "question": "What types of drywall damage can be repaired?",
+                "answer": "Professional drywall repair can fix a wide range of issues, including holes, cracks, dents, water damage, and damage caused by settling or everyday wear. Skilled contractors restore both the appearance and structural integrity of the wall so it looks like the damage never existed."
+            },
+            {
+                "question": "Will repaired drywall match the existing wall texture?",
+                "answer": "Yes. Professional drywall repair includes texture matching and surface preparation so the repaired area blends seamlessly with the surrounding wall. Once completed, the surface is ready for painting or finishing with a smooth, consistent appearance."
+            },
+            {
+                "question": "Can drywall be used to repair older plaster walls?",
+                "answer": "In many cases, drywall is used to patch or reinforce older plaster walls when cracks or holes are too large for simple filler repairs. After installation, the area can be finished and prepared to match the rest of the wall."
+            }
+        ]
+    },
+    {
+        "path": "services/interior-services/cabinetry-wood-refinishing",
+        "slug": "cabinetry-wood-refinishing",
+        "title": "Custom Cabinet & Wood Refinishing",
+        "displayTitle": "Cabinetry & Wood Refinishing",
+        "description": "Our Park City custom cabinetry professionals offer beautiful custom cabinet refinishing with professional installation that will work beautifully for your kitchen remodeling and interior design.",
+        "images": [
+            {
+                "src": "images/services/cabinetry-wood-refinishing-park-city-ut.jpg",
+                "alt": "Custom cabinet refinishing and wood restoration"
+            }
+        ],
+        "intro": "Custom cabinets and woodwork are often some of the most valuable design features in a home, adding warmth, character, and craftsmanship to kitchens, bathrooms, built-ins, trim, and architectural details. Over time, however, daily use, sunlight, moisture, and general wear can cause wood surfaces to become scratched, faded, dull, or damaged—making even high-end cabinetry look tired and outdated.\n\nMany homeowners assume replacement is the only option, but in most cases, professional cabinet and wood refinishing can restore your existing woodwork for a fraction of the cost. At R.L. Peek Painting, we provide expert custom cabinet refinishing and wood restoration services designed to revive and protect your investment while delivering a clean, updated look that fits your home's style.\n\nWe specialize in detailed prep work, sanding, repair, staining or repainting, and protective topcoats to create a smooth, durable finish. Whether you're looking for a natural wood tone, a modern painted cabinet finish, or a complete transformation, we bring craftsmanship and attention to detail to every project.\n\nCabinets and custom wood features are a major investment, and refinishing is one of the best ways to extend their life and improve the overall look of your home. If you have questions about our custom cabinet and wood refinishing services or would like to explore additional upgrades like [interior painting](/services/interior-services/painting), contact us today to schedule a consultation. We'll walk through your project, discuss options, and provide a clear plan to bring your cabinets and woodwork back to life.",
+        "faq": [],
+        "faqItems": [
+            {
+                "question": "Is cabinet refinishing better than replacing cabinets?",
+                "answer": "In many cases, refinishing is a more cost-effective option than full replacement. Professional refinishing restores the appearance of existing cabinetry while preserving the original structure, allowing homeowners to achieve an updated look for a fraction of the cost."
+            },
+            {
+                "question": "What is included in professional cabinet and wood refinishing?",
+                "answer": "Refinishing typically includes detailed preparation such as cleaning, sanding, repairs, and surface conditioning, followed by staining or painting and protective topcoat application. This process ensures a smooth, durable finish that extends the life of the woodwork."
+            },
+            {
+                "question": "Can refinishing change the color or style of my cabinets?",
+                "answer": "Yes. Cabinet refinishing can restore natural wood tones, apply a new stain color, or create a completely updated painted finish. This allows homeowners to modernize their space without replacing existing cabinetry."
+            }
+        ]
+    },
+    {
+        "path": "services/exterior-services/painting",
+        "slug": "painting",
+        "title": "Exterior Painting Park City - Exterior Paint, House Painting",
+        "displayTitle": "Exterior Painting",
+        "description": "RL Peek Painting is a Park City painter who offers exterior painting services for your home as well as power washing and staining.",
+        "images": [
+            {
+                "src": "images/services/exterior-painting.jpg",
+                "alt": "Exterior house painting in Park City"
+            }
+        ],
+        "faq": [
+            {
+                "question": "Professional Exterior House Painting in Park City, UT",
+                "answer": "A quality exterior paint job starts with proper surface preparation. Our process includes cleaning, scraping loose paint, sanding rough areas, repairing minor damage when needed, and applying premium primers and coatings for strong adhesion and a smooth, even finish."
+            },
+            {
+                "question": "Why Homeowners Hire Us for Exterior Painting",
+                "answer": "Exterior painting does more than improve appearance—it helps protect your home from moisture, UV exposure, cracking, peeling, and long-term wear. We take the time to understand your goals and recommend the best products and approach to ensure your home looks great and stays protected for years to come.\n\nWe proudly provide dependable exterior house painting services, delivering high-quality craftsmanship, clear communication, and results you'll feel confident investing in."
+            },
+            {
+                "question": "Recent Exterior Painting Tips & Tricks",
+                "answer": "See our latest painting tips and how-to articles for your home."
+            },
+            {
+                "question": "Latest Exterior Painting Projects",
+                "answer": "View our [latest exterior painting projects](/latest-projects) to see recent work."
+            }
+        ],
+        "intro": "Professional exterior painting is one of the best ways to improve curb appeal and protect your home from harsh mountain weather. A fresh, high-quality paint job instantly enhances the look of your property and creates a strong first impression for guests, neighbors, and potential buyers.\n\nAt RL Peek Painting, our [experienced painters](/) use professional-grade tools, coatings, and proven preparation methods to deliver durable, long-lasting results. Whether you need full exterior repainting or targeted touch-ups, we bring the same attention to detail to every project. We also provide expert solutions for [interior house painting](/services/interior-services/painting), giving homeowners a trusted team for complete home improvement.\n\nChoosing the right exterior colors can feel overwhelming, especially with changing light and seasonal conditions in Park City. If you need help selecting colors, our dedicated color consultant offers an experienced artistic eye and enjoys helping homeowners create color combinations that highlight the unique features of their home's architecture.",
+        "faqItems": [
+            {
+                "question": "Why is exterior painting important for my home?",
+                "answer": "Exterior painting does more than improve curb appeal — it protects your home from moisture, UV exposure, cracking, peeling, and long-term weather damage. A high-quality paint job helps extend the life of your siding while maintaining your home's appearance."
+            },
+            {
+                "question": "What preparation is required before exterior painting?",
+                "answer": "Proper preparation is essential for a long-lasting finish. This typically includes cleaning surfaces, removing loose paint, sanding rough areas, making minor repairs, and applying primer to ensure strong adhesion and smooth results."
+            },
+            {
+                "question": "Can professionals help choose exterior paint colors?",
+                "answer": "Yes. Professional painters often provide color consultation to help homeowners select shades that complement their home's architecture and look great under different lighting conditions throughout the year."
+            }
+        ]
+    },
+    {
+        "path": "services/exterior-services/staining",
+        "slug": "staining",
+        "title": "Exterior Staining Park City - Wood Finish, Wood Finishing",
+        "displayTitle": "Exterior Staining",
+        "description": "RL Peek Painting is a Park City painting contractor that offers exterior wood staining services for your Utah home.",
+        "images": [
+            {
+                "src": "images/services/exterior-staining.png",
+                "alt": "Exterior wood staining on siding and trim"
+            }
+        ],
+        "faq": [
+            {
+                "question": "Professional Wood Staining in Park City, UT",
+                "answer": "A great stain job starts with proper preparation. That's why we focus on cleaning, sanding, surface conditioning, and careful application to ensure the stain absorbs evenly and delivers a smooth, professional appearance. Our goal is to create a finish that not only looks beautiful, but also helps protect your wood from wear and the harsh Utah climate."
+            },
+            {
+                "question": "Why Park City Homeowners Hire Us for Wood Staining",
+                "answer": "We begin with an on-site evaluation to inspect the wood and discuss your goals. Then we recommend the best stain and finish system based on the condition of the surface, the style of your home, and the look you want to achieve.\n\nOur team is known for reliability, clear communication, and detailed craftsmanship. If you're looking for trusted wood staining services in Park City, we're ready to deliver results you'll be proud to show off."
+            }
+        ],
+        "intro": "Our painting professionals specialize in enhancing and protecting wood surfaces with high-quality stain application. Whether you're staining interior trim, beams, railings, doors, or exterior wood features, we use proven methods to achieve rich color, even tone, and a long-lasting finish.\n\nWith extensive knowledge of stain types—including transparent, semi-transparent, and solid stains—we can help you choose the best option for your wood species, desired appearance, and exposure to sunlight or moisture. If your project requires refinishing, our skilled [wood finishing team](/services/interior-services/cabinetry-wood-refinishing) can restore worn surfaces and bring them back to life.",
+        "faqItems": [
+            {
+                "question": "What types of exterior wood surfaces can be stained?",
+                "answer": "Exterior staining can be applied to many wood surfaces such as siding, decks, trim, beams, railings, and doors. Professional staining enhances the natural beauty of the wood while providing long-term protection from moisture, sunlight, and weather exposure."
+            },
+            {
+                "question": "Why is preparation important before applying exterior stain?",
+                "answer": "Proper preparation ensures the stain absorbs evenly and lasts longer. This typically includes cleaning, sanding, and conditioning the wood surface so the finish looks smooth and provides durable protection."
+            },
+            {
+                "question": "How do I choose the right type of exterior stain?",
+                "answer": "There are several stain options, including transparent, semi-transparent, and solid finishes. A professional contractor helps determine the best choice based on the wood type, desired appearance, and exposure to sunlight or moisture."
+            }
+        ]
+    },
+    {
+        "path": "services/polyaspartic-garage-floors",
+        "slug": "polyaspartic-garage-floors",
+        "title": "Polyaspartic Garage Floors",
+        "displayTitle": "Polyaspartic Garage Floors",
+        "description": "Fast-curing polyaspartic garage floors. Durable, UV-stable, stain resistant. Free estimate with RL Peek Painting.",
+        "images": [
+            {
+                "src": "images/services/epoxy-garage-flooring.jpg",
+                "alt": "Polyaspartic garage floor coating"
+            }
+        ],
+        "faq": [
+            {
+                "question": "What Is A Polyaspartic Garage Floor",
+                "answer": "Polyaspartic is an advanced concrete coating designed for strong bond, fast cure, and excellent durability. It penetrates properly prepared concrete to create a tight mechanical grip, then builds a tough, UV-stable top layer that protects against wear. Because it cures quickly across a wide range of temperatures, our team can complete most two-car garages in a day, minimizing disruption to your routine."
+            },
+            {
+                "question": "How Polyaspartic Coatings Work",
+                "answer": "After surface prep and repairs, we apply a primer that wets out the concrete and locks in. Colored base coat follows, then a full broadcast of vinyl flakes or quartz for appearance and traction. A clear polyaspartic topcoat seals the system, giving you a bright, easy-to-clean floor that resists hot-tire pickup and deicing chemicals."
+            },
+            {
+                "question": "Benefits That Matter",
+                "answer": "Fast Return To Service: Walk on it in hours and move vehicles back typically the next day.\n  Cold-Weather Ready: Reliable curing across the Wasatch Back's cool mornings and variable seasons.\n  UV Stable Finish: Keeps its color and gloss in high-altitude sun.\n  Road Salt And Slush Resistant: Designed to handle winter meltwater and deicing agents.\n  Easy Upkeep: Sweep, vacuum, or mop with a pH-neutral cleaner.\n  Custom Looks: Choose popular gray blends, bold chip mixes, or quartz textures.\n  Safer Footing: Add anti-slip texture that helps when snow and rain drip off your car.\n  Seamless Protection: Fewer joints to collect dirt and no peeling at hot-tire spots when installed and maintained correctly."
+            },
+            {
+                "question": "Our Polyaspartic Floor Process",
+                "answer": "Assessment And Quote; Concrete Preparation; Primer And Base Coat; Full Flake Or Quartz Broadcast; Scrape And Vacuum; Clear Polyaspartic Topcoat; Final Walkthrough. Call ${PHONE_LINK} to get on the calendar."
+            },
+            {
+                "question": "Local Insight For Garages",
+                "answer": "We are used to winters that bring snow, grit, and steady freeze-thaw cycles. Polyaspartic floors create a protective shell that helps block moisture intrusion and staining. Many homeowners in Summit and Wasatch Counties choose a full flake system with light texture for added traction when wet.\n\nLocal tip: Keep a mat at entries during winter and rinse the floor with warm water after storms. Quick cleanup limits salt residue and helps your polyaspartic topcoat keep its crystal-clear look."
+            },
+            {
+                "question": "Why Choose RL Peek Painting For Your Garage Floor",
+                "answer": "We are a local painting and coatings team that treats your garage like a valuable room in the house. Specialized Coating Expertise; Premium Materials; Clear Communication; Respect For Your Home; Local References; We Stand Behind Our Work. Refreshing your curb appeal, too? Pair your new floor with [exterior services](/services/exterior-services) to boost the entire property."
+            },
+            {
+                "question": "Polyaspartic Vs. Epoxy At A Glance",
+                "answer": "Both coatings can protect concrete, but homeowners often prefer polyaspartic for daily use and fast turnarounds. Polyaspartic typically cures faster, handles UV exposure better, and resists hot-tire pickup when installed correctly. Epoxy can be a budget-friendly base layer in some multi-coat systems, yet it is more sensitive to sunlight and longer cure times."
+            },
+            {
+                "question": "Design Options To Match Your Space",
+                "answer": "Choose from popular chip blends that complement gray cabinets and white walls, or select warm stone mixes that hide dust between cleanings. We can wrap the coating up the stem walls for a neat, finished look and add a slip-resistant profile. For workshops and commercial spaces, a quartz system delivers extra abrasion resistance. If you are updating other rooms, browse our [services](/services) to see how fresh paint and finishes can complete the transformation."
+            },
+            {
+                "question": "Care And Maintenance",
+                "answer": "Maintenance is simple. Sweep or vacuum grit, then mop with a pH-neutral cleaner. Place soft pads under stands or jacks, and use a mat under motorcycle kickstands. Wipe up chemicals promptly. If something stubborn spills, let us know. Our team will guide you on safe cleaners that protect your topcoat."
+            },
+            {
+                "question": "Bring Your Garage To Life",
+                "answer": "Ready for a durable, great-looking floor that works year-round in the Heber Valley climate? Call RL Peek Painting at [435-649-0158](tel:+1-435-649-0158) to book your free estimate. If you want to coordinate other updates, check our [services](/services) and consider pairing your floor with [interior services](/services/interior-services) or [exterior services](/services/exterior-services). We are here to help you get a cleaner, brighter, more useful garage you will love walking into every day."
+            }
+        ],
+        "intro": "Your garage should work as hard as you do. Our polyaspartic garage floors deliver a seamless, glossy finish that stands up to winter slush, hot tires, spilled oil, and everyday projects. Call [435-649-0158](tel:+1-435-649-0158) to schedule a free, friendly estimate with RL Peek Painting.\n\nChoose long-lasting Polyaspartic Garage Floors for a clean, glossy surface that stands up to daily use. This high-performance coating resists chemicals, abrasions, stains, and UV fading. It installs faster than traditional epoxy and cures quickly for same-day use in most cases. Homeowners love the easy cleanup and the decorative chips or quartz options. Planning a larger refresh inside your home? Explore our [interior services](/services/interior-services) for painting and finish upgrades that pair perfectly with a new floor.",
+        "faqItems": [
+            {
+                "question": "How Long Does Installation Take And When Can I Park On It?",
+                "answer": "Most two-car garages are completed in one working day. You can usually walk on the floor the same day and bring vehicles back the next day, depending on temperature and project size. We will confirm exact timing during your estimate."
+            },
+            {
+                "question": "Will Hot Tires Or Road Salt Damage The Coating?",
+                "answer": "Polyaspartic topcoats are designed to resist hot-tire pickup and deicing chemicals. Rinse off heavy salt and use a mild, pH-neutral cleaner for routine care to keep the finish clear and glossy."
+            },
+            {
+                "question": "How Much Does A Polyaspartic Garage Floor Cost?",
+                "answer": "Pricing varies by garage size, existing concrete condition, repair needs, and the chip or quartz style you choose. Stem wall coating and anti-slip options can also affect price. We provide a detailed, no-pressure estimate after an on-site review."
+            }
+        ]
+    },
+    {
+        "path": "services/lime-and-mineral-washing",
+        "slug": "lime-and-mineral-washing",
+        "title": "Lime & Mineral Washing",
+        "displayTitle": "Lime & Mineral Washing",
+        "description": "Interior and exterior lime and mineral washing for breathable, textured walls and facades. Call RL Peek Painting to schedule an estimate.",
+        "images": [
+            {
+                "src": "images/services/lime-and-mineral-washing.jpg",
+                "alt": "Lime wash and mineral finish on interior or exterior wall"
+            }
+        ],
+        "faq": [
+            {
+                "question": "What Is Lime And Mineral Washing",
+                "answer": "Lime and mineral washing is a thin, mineral-rich coating that bonds to masonry and properly prepared surfaces. Unlike standard film-forming paint, lime and silicate-based products integrate with the substrate. The result is a soft, organic look with subtle tonal variation. These finishes are naturally breathable and vapor permeable. Homeowners love the finish for accent walls, fireplaces, and exterior brick or stucco where a lived-in, European feel is desired."
+            },
+            {
+                "question": "Benefits For Your Home In Summit or Wasatch County",
+                "answer": "Our lime and mineral wash options perform well in Utah's sun, dry air, and freeze-thaw winters.\n  Soft, layered texture that adds depth and character.\n  Breathable finish that helps reduce moisture buildup on masonry and plaster.\n  Natural variation that hides minor surface irregularities.\n  Low-odor, low-VOC product lines.\n  UV-stable mineral pigments that mellow gracefully over time.\n  Custom colors and wash intensity.\n  Great for brick, lime plaster, stone, stucco, and properly primed interiors.\n\nIf you are comparing options, you can also [see all painting services](/services) we provide locally."
+            },
+            {
+                "question": "Our Lime And Mineral Wash Process",
+                "answer": "Every home is unique. We test, sample, and adjust the wash strength so your finish reads as timeless rather than trendy: Consultation and samples; Surface preparation; First coat; Layering and texture; Detailing and cleanup; Cure and care. Thinking about a feature wall or bath refresh? You can [learn more about our interior services](/services/interior-services) and plan everything together. Call ${PHONE_LINK} to talk through timelines."
+            },
+            {
+                "question": "Why Choose RL Peek Painting",
+                "answer": "Mineral finishes reward patience and craftsmanship. Our team is trained in hand-applied techniques. We keep communication clear, protect your space carefully, and respect your schedule. What you can expect: Tailored color and finish guidance; Clean prep and careful masking; Friendly, professional crews; A breathable, beautiful finish.\n\nLocal tip: Utah's shoulder seasons are ideal for exterior mineral work. Spring and early fall usually bring steadier temperatures that support even curing and consistent color."
+            },
+            {
+                "question": "Local Considerations",
+                "answer": "Homes in and around Park City experience strong sun, dry summers, and cold winters. Mineral-based washes are a smart match because they do not trap vapor. For interiors, the breathable nature of lime and mineral washes makes them attractive for accent walls, entryways, and bathrooms with good ventilation. The layered, organic look pairs well with natural wood, stone, and metal."
+            },
+            {
+                "question": "Care And Longevity",
+                "answer": "Mineral finishes are designed to age with character. On interiors, they typically last for many years with light dusting and occasional gentle wipe-downs. Exteriors evolve more visibly due to sun and weather, which many homeowners love. If you prefer a crisper appearance over time, a light refresh coat can be applied. We are happy to test a small, inconspicuous area first so you can see the exact effect before we proceed."
+            },
+            {
+                "question": "Plan Your Project With A Friendly Estimate",
+                "answer": "Ready to bring breathable texture and timeless style to your home? Call [435-649-0158](tel:+1-435-649-0158) to schedule your on-site estimate with RL Peek Painting. If you are mapping out curb-appeal upgrades too, feel free to [explore our exterior services](/services/exterior-services). You can also [see all painting services](/services) and find the best fit for your project."
+            }
+        ],
+        "intro": "Add texture, depth, and timeless character to your walls with breathable mineral-based finishes that age beautifully. Our team applies authentic lime and mineral washes. Interior & Exterior Lime/Mineral Washing in Summit and Wasatch Counties are available from RL Peek Painting. For a friendly estimate, call [435-649-0158](tel:+1-435-649-0158) today.",
+        "faqItems": [
+            {
+                "question": "Where Can Lime Or Mineral Wash Be Applied?",
+                "answer": "It works beautifully on brick, stone, stucco, and lime plaster. On interiors, we can also apply it to properly primed drywall or plaster finishes. We evaluate the surface first and recommend the best system for a durable bond."
+            },
+            {
+                "question": "How Much Variation Should I Expect?",
+                "answer": "Variation is part of the charm. You will see soft movement, gentle highs and lows, and a natural, matte texture. We control the level of contrast with layering and dilution so it looks intentional, not patchy."
+            },
+            {
+                "question": "How Do I Maintain The Finish?",
+                "answer": "Inside, dust with a microfiber cloth and spot clean with a lightly damp sponge. Outside, rinsing with low-pressure water helps keep surfaces fresh. Avoid harsh chemicals and aggressive scrubbing so the mineral patina continues to look refined."
+            }
+        ]
+    },
+    {
+        "path": "services/custom-interior-plastering",
+        "slug": "custom-interior-plastering",
+        "title": "Plaster for Interiors",
+        "displayTitle": "Custom Interior Plastering",
+        "description": "Elevate your walls with Venetian and textured plaster. Expert trowel-applied finishes for durable, elegant interiors.",
+        "images": [
+            {
+                "src": "images/services/interior-plastering.jpg",
+                "alt": "Venetian plaster and textured interior finish"
+            }
+        ],
+        "faq": [
+            {
+                "question": "What Interior Plaster Is And Where It Shines",
+                "answer": "Interior plaster is a mineral-rich finish applied by hand in thin layers, then refined to a matte, satin, or polished look. It adds light-catching movement you cannot get from flat paint. In living rooms and bedrooms it brings calm texture. In dining rooms it adds drama. In entries and stairways it creates a welcoming focal point."
+            },
+            {
+                "question": "Venetian Plaster",
+                "answer": "Venetian plaster is a lime and marble blend burnished to a stone-like sheen. It feels smooth, looks elegant, and ages beautifully. Choose it for feature walls, formal spaces, and bathrooms outside direct splash zones."
+            },
+            {
+                "question": "Textured And Trowel-Applied Finishes",
+                "answer": "Prefer a subtle, natural look? Textured plaster and traditional trowel finishes deliver soft movement with a quiet, matte surface ideal for relaxed mountain-modern interiors."
+            },
+            {
+                "question": "Roman Clay And Limewash Looks",
+                "answer": "Earthy, mineral color with velvet depth. These breathable finishes help disguise minor surface variation and bring an artisan feel to open-plan spaces. Great results begin with sound surfaces. If your walls need patching or smoothing first, we can coordinate seamless [drywall repair](/services/interior-services/drywall-repair) so the final finish lays flat and uniform."
+            },
+            {
+                "question": "Benefits For Homeowners",
+                "answer": "Crafted appearance that elevates any room without heavy patterns\n  Durable, repairable surface that stands up to everyday living\n  Low-odor, mineral-based options for better indoor comfort\n  Breathable finish that helps manage moisture on interior walls\n  Custom sheens from soft matte to mirror-like polish\n  Color depth and movement that standard paint cannot match"
+            },
+            {
+                "question": "Our Interior Plaster Process",
+                "answer": "Design and samples: We review inspiration, lighting, and sheen, then prepare sample boards so you can see the finish in your space.\n  Surface prep: We protect floors and furnishings, fill minor flaws, and prime as needed for strong adhesion.\n  Build layers: Multiple thin coats are troweled for depth, then refined for texture or polished for sheen.\n  Detail and protection: We burnish or seal based on the look and room use for easy care.\n  Final walk-through: We confirm color, movement, and sheen under your lighting.\n\nConsidering a full-room refresh? We can blend new plaster with expert [interior painting](/services/interior-services/painting) or [interior staining](/services/interior-services/staining) for trim and doors.\n\nLocal insight: At our elevation and dry climate, controlled curing matters. We schedule in phases and manage ventilation to help prevent hairline cracking and ensure a smooth, even finish."
+            },
+            {
+                "question": "Why Choose RL Peek Painting For Interior Plaster",
+                "answer": "Our team specializes in premium plaster finishes that go beyond paint. You get attentive prep, clean job sites, and a finish tuned to your home's light and style. Hand-applied craftsmanship shows in the details. We align the finish with how you live—high-traffic rooms get durable treatments, feature walls get refined movement and just-right sheen."
+            },
+            {
+                "question": "Built For The Wasatch Back",
+                "answer": "Mineral finishes add character without glare, and their natural variation complements mountain-modern, farmhouse, and lodge styles common in nearby neighborhoods. Whether you are updating a primary home or fine-tuning a vacation property, our team helps your plaster look right in every season."
+            },
+            {
+                "question": "Popular Interior Plaster Looks We Apply",
+                "answer": "Matte lime plaster in living rooms; polished Venetian plaster on dining accent walls; textured trowel finishes in hallways; Roman clay-inspired movement in primary suites; plaster-wrapped fireplace surrounds. If your cabinetry needs a refresh, explore our [cabinetry and wood refinishing](/services/interior-services/cabinetry-wood-refinishing) options."
+            },
+            {
+                "question": "Care And Maintenance Tips",
+                "answer": "Allow your new surface to cure fully before cleaning. Dust with a soft cloth and spot-clean with a damp microfiber as directed. Avoid harsh chemicals. If you ever need touch-ups, our artisans can blend new material so the movement remains consistent."
+            },
+            {
+                "question": "Transform Your Walls With A Crafted Finish",
+                "answer": "Ready to add depth and elegance to your home with artisan interior plaster? Call [435-649-0158](tel:+1-435-649-0158) to speak with RL Peek Painting and get your in-home recommendations and samples. If you are coordinating a larger refresh, our team can also help with full-room [painting and finishing services](/services) to bring everything together."
+            }
+        ],
+        "intro": "Bring depth, warmth, and luxury to your home with handcrafted interior plaster finishes in Utah. From smooth Venetian plaster to softly textured accents, RL Peek Painting applies premium, trowel-built surfaces that outlast ordinary paint. Call [435-649-0158](tel:+1-435-649-0158) to schedule your on-site consultation.\n\nOur Plaster for Interiors pairs artisan application with long-lasting beauty so your walls look refined from every angle.",
+        "faqItems": [
+            {
+                "question": "Can You Match A Specific Color Or Sheen?",
+                "answer": "Yes. We create custom tints and sheen levels, then provide sample boards in your room so you can approve the finish under real lighting."
+            },
+            {
+                "question": "Where Can Venetian Plaster Be Used?",
+                "answer": "Feature walls, bedrooms, dining rooms, stairways, and powder rooms are all excellent. For wet zones, we select products and sealers suited to incidental moisture, then review care guidelines."
+            },
+            {
+                "question": "How Long Does An Interior Plaster Project Take?",
+                "answer": "Most projects finish in several days depending on room size, surface condition, and the number of coats. We provide a clear schedule before work begins and keep you updated each day."
+            }
+        ]
+    }
+]

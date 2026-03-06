@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# scraped site content (run scripts/scrape-site.mjs to regenerate)
+/scraped
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
