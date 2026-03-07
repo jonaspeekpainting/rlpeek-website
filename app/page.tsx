@@ -86,6 +86,8 @@ const recentTips = [
   },
 ];
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
     alternates: { canonical: SITE_URL },

@@ -54,6 +54,7 @@ function parsePage(raw: unknown): PageItem | null {
 
 /**
  * Fetch list of pages (tips or projects) from job-engine, newest first.
+ * Uses cache: 'no-store' so the home page and latest-projects always get fresh data.
  */
 export async function fetchPages(options: {
   type: "tip" | "project";
@@ -64,7 +65,7 @@ export async function fetchPages(options: {
     const contractorId = getContractorId();
     const maxCount = options.maxCount ?? 100;
     const url = `${base}/api/v1/public/pages?contractor_id=${encodeURIComponent(contractorId)}&type=${options.type}&max_count=${maxCount}`;
-    const res = await fetch(url);
+    const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) return [];
     const data = (await res.json()) as unknown;
     if (!Array.isArray(data)) return [];
@@ -73,6 +74,8 @@ export async function fetchPages(options: {
       const p = parsePage(item);
       if (p) parsed.push(p);
     }
+    // Ensure newest first (API usually does this; job-engine cache can be up to 10 min)
+    parsed.sort((a, b) => (b.created_at > a.created_at ? 1 : b.created_at < a.created_at ? -1 : 0));
     return parsed;
   } catch {
     return [];
@@ -87,7 +90,7 @@ export async function fetchPageBySlug(slug: string): Promise<PageItem | null> {
     const base = getBaseUrl();
     const contractorId = getContractorId();
     const url = `${base}/api/v1/public/pages/${encodeURIComponent(slug)}?contractor_id=${encodeURIComponent(contractorId)}`;
-    const res = await fetch(url);
+    const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) return null;
     const data = (await res.json()) as unknown;
     return parsePage(data);
