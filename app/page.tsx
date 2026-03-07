@@ -4,6 +4,8 @@ import { Box, Container, Title, Text, Button, Card, SimpleGrid, Stack } from "@m
 import Image from "next/image";
 import { PHONE_LINK, SITE_NAME, SITE_URL, s3Image } from "@/lib/site";
 import { getGoogleReviews } from "@/lib/googleReviews";
+import { fetchPages } from "@/lib/pagesApi";
+import { RecentProjectsCarousel } from "@/components/RecentProjectsCarousel";
 import { ReviewsSection } from "@/components/ReviewsSection";
 
 const services = [
@@ -92,7 +94,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function HomePage() {
-  const reviews = await getGoogleReviews({ minRating: 5, maxCount: 3 });
+  const [reviews, projects] = await Promise.all([
+    getGoogleReviews({ minRating: 5, maxCount: 3 }),
+    fetchPages({ type: "project", maxCount: 3 }),
+  ]);
   return (
     <>
       {/* Hero: full-width image + dark overlay + headline + CTA */}
@@ -274,6 +279,21 @@ export default async function HomePage() {
             showViewAll
             viewAllHref="/reviews"
             viewAllLabel="Read More Reviews"
+          />
+        </Container>
+      </Box>
+
+      {/* Recent Projects carousel */}
+      <Box py={{ base: "xl", sm: "2xl" }} bg="gray.0">
+        <Container size="lg">
+          <RecentProjectsCarousel
+            projects={projects}
+            title="Recent Projects"
+            maxItems={3}
+            columns={{ base: 1, sm: 3 }}
+            showViewAll
+            viewAllHref="/latest-projects"
+            viewAllLabel="View All Projects"
           />
         </Container>
       </Box>
