@@ -6,7 +6,8 @@ const CANONICAL_HOST = "www.rlpeekpainting.com";
 
 export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone();
-  const host = request.headers.get("host") ?? "";
+  const rawHost = request.headers.get("host") ?? "";
+  const host = rawHost.replace(/:\d+$/, ""); // strip port for comparison
 
   // Redirect non-www to www with 301 (permanent) for same-domain consistency (AEO).
   if (host === "rlpeekpainting.com") {
