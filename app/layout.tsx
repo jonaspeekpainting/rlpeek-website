@@ -24,11 +24,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `Summit and Wasatch County Painter | ${SITE_NAME} | House Painter`,
+    default: `${SITE_NAME} | Painting Services in Summit & Wasatch Counties`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "RL Peek Painting is a professional painting contractor in Summit and Wasatch Counties in Utah that offers interior painting, exterior painting, staining, and more. Serving Summit and Wasatch County since 1987.",
+    "Professional interior and exterior painting, staining, and wood refinishing in Park City, Summit & Wasatch County since 1987. Free estimates and quality craftsmanship.",
   metadataBase: new URL(SITE_URL),
   openGraph: {
     type: "website",

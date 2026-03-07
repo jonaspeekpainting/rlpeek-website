@@ -86,12 +86,17 @@ const recentTips = [
   },
 ];
 
-export const dynamic = "force-dynamic";
+// Revalidate every hour to improve response time while keeping content fresh (AEO).
+export const revalidate = 3600;
 
 export async function generateMetadata(): Promise<Metadata> {
+  const canonicalUrl = `${SITE_URL}/`;
   return {
-    alternates: { canonical: SITE_URL },
-    openGraph: { url: SITE_URL },
+    title: "Interior & Exterior Painting | Park City, Summit & Wasatch County",
+    description:
+      "Professional interior and exterior painting in Park City, Summit & Wasatch County since 1987. Free estimates, quality materials, and experienced painters. Request your estimate today.",
+    alternates: { canonical: canonicalUrl },
+    openGraph: { url: canonicalUrl },
   };
 }
 
@@ -146,7 +151,7 @@ export default async function HomePage() {
       <Box py={{ base: "xl", sm: "2xl" }}>
         <Container size="lg">
           <Title order={2} className="text-3xl font-bold sm:text-4xl" c="dark">
-            {SITE_NAME}
+            Trusted Painting in Park City, Summit & Wasatch County
           </Title>
           <Stack gap="md" mt="lg">
             <Text size="lg" c="dark" lh={1.7}>
