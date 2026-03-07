@@ -5,6 +5,8 @@ import { SITE_NAME, PHONE, PHONE_LINK, ADDRESS, s3Image } from "@/lib/site";
 
 const footerLinks = [
   { href: "/service-areas", label: "Service Areas" },
+  { href: "/service-areas/park-city-ut-painting", label: "Park City" },
+  { href: "/service-areas/deer-valley-ut-painting", label: "Deer Valley" },
   { href: "/contact-us", label: "Contact Us" },
   { href: "/reviews", label: "Leave a Review" },
   { href: "/privacy", label: "Privacy Policy" },

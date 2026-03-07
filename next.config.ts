@@ -1,15 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/service-areas/:slug+",
-        destination: "/service-areas",
-        permanent: true,
-      },
-    ];
-  },
   experimental: {
     optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
   },

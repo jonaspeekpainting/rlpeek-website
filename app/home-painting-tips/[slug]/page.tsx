@@ -77,7 +77,16 @@ export default async function TipPage({ params }: Props) {
       >
         <PageBodyContent body={page.body} className="prose prose-zinc max-w-none mt-6" pageTitle={titleDisplay.split("|")[0].trim()} />
       </PageContent>
-      <div className="mx-auto max-w-3xl px-4 pb-10 sm:px-6">
+      <div className="mx-auto max-w-3xl px-4 pb-10 sm:px-6 space-y-6">
+        <div>
+          <h3 className="text-sm font-semibold text-zinc-800 mb-2">Related</h3>
+          <ul className="text-sm text-zinc-600 space-y-1 list-none p-0 m-0">
+            <li><Link href="/services/interior-services/drywall-repair" className="text-sky-600 hover:underline">Drywall repair</Link></li>
+            <li><Link href="/services/interior-services/painting" className="text-sky-600 hover:underline">Interior painting</Link></li>
+            <li><Link href="/services/exterior-services/painting" className="text-sky-600 hover:underline">Exterior painting</Link></li>
+            <li><Link href="/service-areas/park-city-ut-painting" className="text-sky-600 hover:underline">Painting in Park City</Link></li>
+          </ul>
+        </div>
         <p className="text-sm text-zinc-600">
           Ready to get started? Call <a href={PHONE_LINK} className="font-medium text-sky-600">435-649-0158</a> or{" "}
           <Link href="/contact-us" className="font-medium text-sky-600 hover:underline">contact us</Link>.

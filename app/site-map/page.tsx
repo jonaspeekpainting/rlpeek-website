@@ -5,6 +5,8 @@ import {
   getTips,
   getProjects,
   getServices,
+  getServiceAreas,
+  getServiceAreaDisplayTitle,
 } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
 
@@ -27,6 +29,7 @@ export default function SiteMapPage() {
   const tips = getTips();
   const projects = getProjects();
   const services = getServices();
+  const serviceAreas = getServiceAreas();
   return (
     <article className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
       <h1 className="text-3xl font-bold text-zinc-900">Sitemap</h1>
@@ -63,6 +66,13 @@ export default function SiteMapPage() {
           <li key={p.path}>
             <Link href={`/${p.path}`} className="text-sky-600 hover:underline">
               {pageTitle(p)}
+            </Link>
+          </li>
+        ))}
+        {serviceAreas.map((area) => (
+          <li key={area.path}>
+            <Link href={`/${area.path}`} className="text-sky-600 hover:underline">
+              {getServiceAreaDisplayTitle(area)}
             </Link>
           </li>
         ))}

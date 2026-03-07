@@ -10,8 +10,8 @@ import { Anchor, Box, Button, Grid, GridCol, Paper, Text, Title } from "@mantine
 export async function generateMetadata(): Promise<Metadata> {
   const page = getPageByPath("contact-us");
   return {
-    title: page?.title ?? "Contact Us",
-    description: page?.description ?? "Request a free estimate from RL Peek Painting. Contact us by phone or form for interior and exterior painting in Summit and Wasatch County.",
+    title: page?.title ?? "Contact Us | Free Estimate | Park City Painting",
+    description: page?.description ?? "Request a free estimate from RL Peek Painting. Contact us by phone or form for interior and exterior painting in Park City, Summit and Wasatch County.",
     alternates: { canonical: `${SITE_URL}/contact-us` },
   };
 }

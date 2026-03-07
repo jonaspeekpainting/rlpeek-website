@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { getPageByPath, getServiceAreas, getServiceAreaDisplayTitle } from "@/lib/content";
 import { PageContent } from "@/components/PageContent";
 import { ServiceAreasMapDynamic } from "@/components/ServiceAreasMapDynamic";
@@ -99,9 +100,9 @@ export default function ServiceAreasPage() {
         <ul className="grid gap-3 sm:grid-cols-2" role="list">
           {areas.map((area) => (
             <li key={area.slug}>
-              <span className="text-zinc-800">
+              <Link href={`/${area.path}`} className="text-sky-600 hover:underline">
                 {getServiceAreaDisplayTitle(area)}
-              </span>
+              </Link>
             </li>
           ))}
         </ul>

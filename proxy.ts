@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 /** Canonical host: always use www so all traffic lands on the same domain. */
 const CANONICAL_HOST = "www.rlpeekpainting.com";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone();
   const host = request.headers.get("host") ?? "";
 

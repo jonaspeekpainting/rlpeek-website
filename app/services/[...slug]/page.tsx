@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getServices, getPageByPath, getTips } from "@/lib/content";
 import { PageContent } from "@/components/PageContent";
-import { SITE_URL, PHONE_LINK, SITE_NAME, s3Image } from "@/lib/site";
+import { SITE_URL, PHONE_LINK, SITE_NAME, s3Image, AREAS_SERVED } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string[] }> };
 
@@ -74,7 +74,10 @@ export default async function ServicePage({ params }: Props) {
       name: SITE_NAME,
       telephone: PHONE_LINK.replace("tel:", ""),
     },
-    areaServed: { "@type": "State", name: "Utah" },
+    areaServed: [
+      { "@type": "State", name: "Utah" },
+      ...AREAS_SERVED.map((name) => ({ "@type": "Place" as const, name })),
+    ],
     ...(page.images?.[0] && { image: page.images[0].src.startsWith("http") ? page.images[0].src : s3Image(page.images[0].src) }),
   };
 
@@ -91,7 +94,10 @@ export default async function ServicePage({ params }: Props) {
         variant="service"
         recentTips={recentTips}
       >
-        <div className="mt-6">
+        <div className="mt-6 space-y-1">
+          <p className="text-sm text-zinc-600">
+            Serving <Link href="/service-areas/park-city-ut-painting" className="text-sky-600 hover:underline">Park City</Link>, <Link href="/service-areas/deer-valley-ut-painting" className="text-sky-600 hover:underline">Deer Valley</Link>, <Link href="/service-areas/heber-ut-painting" className="text-sky-600 hover:underline">Heber City</Link>, and more throughout Summit & Wasatch County.
+          </p>
           <Link href="/service-areas" className="text-sm text-sky-600 hover:underline">
             Explore our service areas →
           </Link>

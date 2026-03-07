@@ -63,6 +63,26 @@ const faq = [
     answer:
       "We offer interior and exterior painting, staining, and wood refinishing—including drywall repair, cabinetry and woodwork refinishing, interior plastering, lime and mineral washing, and polyaspartic garage floors. We focus on quality craftsmanship and reliable, long-lasting results.",
   },
+  {
+    question: "How much does house painting cost in Park City?",
+    answer:
+      "House painting cost in Park City depends on the scope—interior vs. exterior, square footage, number of rooms, and prep work (e.g., drywall repair). We provide free, detailed estimates after an in-home visit so you know exactly what you're getting. Contact us for a no-obligation quote.",
+  },
+  {
+    question: "When is the best time to paint a house in Utah?",
+    answer:
+      "In Utah, the best time to paint a house is late spring through early fall—typically mid-April through September in Summit and Wasatch Counties. Weather is more stable for adhesion and drying. We schedule exterior work within this window and can discuss interior projects year-round.",
+  },
+  {
+    question: "How long does exterior paint last in mountain climates?",
+    answer:
+      "In mountain climates like Park City, quality exterior paint with proper prep typically lasts 7–10 years or more. Harsh UV, freeze-thaw cycles, and snow can shorten lifespan if lower-grade products are used. We use durable, climate-appropriate paints and thorough preparation to maximize longevity.",
+  },
+  {
+    question: "What is the best exterior paint for Park City winters?",
+    answer:
+      "In high-altitude climates like Park City, exterior paint must withstand UV exposure, freeze-thaw cycles, and heavy snow. High-quality acrylic latex paints with UV inhibitors and flexibility for temperature swings perform best. We select products suited to our local conditions for lasting results.",
+  },
 ];
 
 const recentTips = [
@@ -92,9 +112,9 @@ export const revalidate = 3600;
 export async function generateMetadata(): Promise<Metadata> {
   const canonicalUrl = `${SITE_URL}/`;
   return {
-    title: "Interior & Exterior Painting | Park City, Summit & Wasatch County",
+    title: "Park City Painting Contractor | Interior & Exterior House Painters",
     description:
-      "Professional interior and exterior painting in Park City, Summit & Wasatch County since 1987. Free estimates, quality materials, and experienced painters. Request your estimate today.",
+      "Park City painting contractor and house painters since 1987. Interior & exterior painting, cabinet refinishing, and more in Park City, Summit & Wasatch County. Free estimates. Request yours today.",
     alternates: { canonical: canonicalUrl },
     openGraph: { url: canonicalUrl },
   };
@@ -131,7 +151,7 @@ export default async function HomePage() {
               maw={640}
               className="text-3xl font-bold leading-tight text-white drop-shadow-md sm:text-4xl md:text-5xl"
             >
-              Quality Interior and Exterior Painting Services For Over 35 Years
+              Park City Painting Contractor | Interior & Exterior House Painters
             </Title>
             <Link href="/contact-us" className="inline-block mt-6">
               <Button
@@ -155,12 +175,7 @@ export default async function HomePage() {
           </Title>
           <Stack gap="md" mt="lg">
             <Text size="lg" c="dark" lh={1.7}>
-              At {SITE_NAME}, we&apos;re proud to be a trusted painting company serving Summit and Wasatch County with
-              exceptional craftsmanship and dependable customer service. Since <strong>1987</strong>, we&apos;ve provided
-              professional painting and staining services designed to enhance homes, protect surfaces, and deliver
-              results that stand the test of time. Whether you&apos;re refreshing interior spaces, improving curb appeal with
-              exterior painting, or updating cabinetry and woodwork, our team is committed to a clean process and a
-              flawless finish.
+              At {SITE_NAME}, we&apos;re your trusted <strong>Park City house painters</strong> and <strong>painting contractor Park City UT</strong> residents rely on. Since <strong>1987</strong>, we&apos;ve provided professional interior and exterior painting, staining, and <strong>cabinet refinishing Park City</strong> homeowners count on—with exceptional craftsmanship and dependable customer service. Whether you need <strong>exterior painting Park City</strong> to protect your home or interior refresh and woodwork updates, our team is committed to a clean process and a flawless finish.
             </Text>
             <Text size="lg" c="dark" lh={1.7}>
               We use high-quality paints, stains, and materials paired with detailed surface preparation and careful
@@ -238,6 +253,9 @@ export default async function HomePage() {
               </Link>
             ))}
           </SimpleGrid>
+          <Text size="sm" c="dimmed" mt="md">
+            Serving <Link href="/service-areas" className="text-brand.6 hover:underline">Park City, Deer Valley, Heber City, Midway, Kamas</Link>, and all of Summit & Wasatch County.
+          </Text>
           <Stack gap="sm" mt="xl" align="center">
             <Link href="/services" style={{ width: "100%", maxWidth: 500, display: "flex", justifyContent: "center" }}>
               <Button

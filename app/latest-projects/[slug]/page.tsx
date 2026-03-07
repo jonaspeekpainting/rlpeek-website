@@ -93,7 +93,15 @@ export default async function ProjectPage({ params }: Props) {
           <ProjectGalleryLightbox imageUrls={page.image_keys.map(s3Image)} />
         )}
       </PageContent>
-      <div className="mx-auto max-w-3xl px-4 pb-10 sm:px-6">
+      <div className="mx-auto max-w-3xl px-4 pb-10 sm:px-6 space-y-6">
+        <div>
+          <h3 className="text-sm font-semibold text-zinc-800 mb-2">Related</h3>
+          <ul className="text-sm text-zinc-600 space-y-1 list-none p-0 m-0">
+            <li><Link href="/services" className="text-sky-600 hover:underline">Our services</Link></li>
+            <li><Link href="/contact-us" className="text-sky-600 hover:underline">Get a free estimate</Link></li>
+            <li><Link href="/service-areas" className="text-sky-600 hover:underline">We serve Park City, Deer Valley, Heber City & more</Link></li>
+          </ul>
+        </div>
         <p className="text-sm text-zinc-600">
           Like what you see? <Link href="/contact-us" className="font-medium text-sky-600 hover:underline">Contact us</Link> or call{" "}
           <a href={PHONE_LINK} className="font-medium text-sky-600">435-649-0158</a> for a free estimate.
