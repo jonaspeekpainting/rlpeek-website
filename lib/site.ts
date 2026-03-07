@@ -25,7 +25,7 @@ export const ADDRESS = {
 };
 
 /** Jobsuite API for estimate/contact form submissions */
-export const JOBSUITE_API_BASE = "https://qa.api.jobsuite.app";
+export const JOBSUITE_API_BASE = "https://api.jobsuite.app";
 export const JOBSUITE_CONTRACTOR_ID = "af7500d8-c3b9-4414-b49d-9f50f79dcbab";
 
 export const AREAS_SERVED = [

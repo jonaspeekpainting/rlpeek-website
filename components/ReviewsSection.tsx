@@ -65,11 +65,19 @@ export function ReviewsSection({
         ))}
       </SimpleGrid>
       {showViewAll && (
-        <Link href={viewAllHref}>
-          <Button component="span" color="brand" variant="light">
-            {viewAllLabel}
-          </Button>
-        </Link>
+        <Box style={{ display: "flex", justifyContent: "center" }}>
+          <Link href={viewAllHref} style={{ display: "block", width: "100%", maxWidth: 400 }}>
+            <Button
+              component="span"
+              color="brand"
+              variant="light"
+              size="md"
+              style={{ width: "100%" }}
+            >
+              {viewAllLabel}
+            </Button>
+          </Link>
+        </Box>
       )}
     </Stack>
   );

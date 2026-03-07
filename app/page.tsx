@@ -298,11 +298,19 @@ export default async function HomePage() {
               </Link>
             ))}
           </Stack>
-          <Link href="/home-painting-tips">
-            <Button component="span" color="brand" variant="light" mt="xl">
-              Read Our Home Tips
-            </Button>
-          </Link>
+          <Box mt="xl" style={{ display: "flex", justifyContent: "center" }}>
+            <Link href="/home-painting-tips" style={{ display: "block", width: "100%", maxWidth: 400 }}>
+              <Button
+                component="span"
+                color="brand"
+                variant="light"
+                size="md"
+                style={{ width: "100%" }}
+              >
+                Read Our Home Tips
+              </Button>
+            </Link>
+          </Box>
         </Container>
       </Box>
 
