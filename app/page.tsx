@@ -114,7 +114,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Park City Painting Contractor | Interior & Exterior House Painters",
     description:
-      "Park City painting contractor and house painters since 1987. Interior & exterior painting, cabinet refinishing, and more in Park City, Summit & Wasatch County. Free estimates. Request yours today.",
+      "Interior & exterior painting, staining, and more in Summit & Wasatch Counties. Free estimates - request yours today.",
     alternates: { canonical: canonicalUrl },
     openGraph: { url: canonicalUrl },
   };
