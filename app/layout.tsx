@@ -2,6 +2,7 @@ import "@mantine/core/styles.css";
 import "@mantine/tiptap/styles.css";
 
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from "@mantine/core";
 import { Header } from "@/components/Header";
@@ -11,6 +12,9 @@ import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
 import { SITE_NAME, SITE_URL, s3Image } from "@/lib/site";
 import { theme } from "@/lib/theme";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-069W13DE77";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,6 +58,23 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript defaultColorScheme="light" />
         <LocalBusinessJsonLd />
+        <Script
+          id="gtag-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `,
+          }}
+        />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+          async
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased`}
