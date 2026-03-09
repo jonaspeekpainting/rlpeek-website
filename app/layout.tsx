@@ -45,6 +45,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: s3Image("images/companyFavicon.ico"),
+    apple: s3Image("images/apple-touch-icon.png"),
   },
 };
 

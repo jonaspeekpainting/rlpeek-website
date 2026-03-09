@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Anchor, Box, Container, SimpleGrid, Stack, Text, Title } from "@mantine/core";
+import { Anchor, Box, Container, Group, SimpleGrid, Stack, Text, Title } from "@mantine/core";
+import { IconBrandFacebook, IconBrandInstagram } from "@tabler/icons-react";
 import { SITE_NAME, PHONE, PHONE_LINK, ADDRESS, s3Image } from "@/lib/site";
 
 const footerLinks = [
@@ -63,6 +64,35 @@ export function Footer() {
                 </Link>
               ))}
             </Stack>
+          </Stack>
+          <Stack gap="xs">
+            <Title order={6} fw={600} c="dark">
+              Follow Us
+            </Title>
+            <Group gap="sm">
+              <Anchor
+                href="https://www.instagram.com/peekpainting/"
+                target="_blank"
+                rel="noopener noreferrer"
+                component="a"
+                c="dimmed"
+                className="hover:text-dark transition-colors"
+                aria-label="Instagram"
+              >
+                <IconBrandInstagram size={28} stroke={1.5} />
+              </Anchor>
+              <Anchor
+                href="https://www.facebook.com/PeekPainting"
+                target="_blank"
+                rel="noopener noreferrer"
+                component="a"
+                c="dimmed"
+                className="hover:text-dark transition-colors"
+                aria-label="Facebook"
+              >
+                <IconBrandFacebook size={28} stroke={1.5} />
+              </Anchor>
+            </Group>
           </Stack>
         </SimpleGrid>
         <Box mt="xl" pt="lg" style={{ borderTop: "1px solid var(--mantine-color-gray-2)" }}>
