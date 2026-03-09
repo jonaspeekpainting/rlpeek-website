@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { wwwRedirect } from "./proxy";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
@@ -7,7 +6,15 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
   },
   async redirects() {
-    return [wwwRedirect];
+    // Application-level fallback. Primary redirect is in Amplify customRules.
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host" as const, value: "rlpeekpainting.com" }],
+        destination: "https://www.rlpeekpainting.com/:path*",
+        permanent: true,
+      },
+    ];
   },
   async headers() {
     return [
