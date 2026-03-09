@@ -287,9 +287,12 @@ export function cleanServiceText(raw: string): string {
     .trim();
   // Replace "See This Project" with link to latest projects
   t = t.replace(/\s*See This Project\s*/gi, " [See this project](/latest-projects). ");
-  // Replace "Read More About X" with link to service
+  // Replace "Read More About X" with link to service (skip if already a markdown link)
   for (const [label, href] of Object.entries(READ_MORE_SERVICE_SLUGS)) {
-    const re = new RegExp(`\\s*Read More About\\s+${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*`, "gi");
+    const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const alreadyLinked = new RegExp(`\\[Read more about ${escaped}\\]\\(`, "i");
+    if (alreadyLinked.test(t)) continue;
+    const re = new RegExp(`\\s*Read More About\\s+${escaped}\\s*`, "gi");
     t = t.replace(re, ` [Read more about ${label}](${href}) `);
   }
   return t.replace(/\s+/g, " ").trim();

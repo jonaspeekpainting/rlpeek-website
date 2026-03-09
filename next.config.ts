@@ -1,9 +1,13 @@
 import type { NextConfig } from "next";
+import { wwwRedirect } from "./proxy";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   experimental: {
     optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
+  },
+  async redirects() {
+    return [wwwRedirect];
   },
   async headers() {
     return [

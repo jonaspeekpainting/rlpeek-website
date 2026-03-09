@@ -54,18 +54,23 @@ function parsePage(raw: unknown): PageItem | null {
 
 /**
  * Fetch list of pages (tips or projects) from job-engine, newest first.
- * Uses cache: 'no-store' so the home page and latest-projects always get fresh data.
+ * Defaults to ISR revalidation every 3600 s. Pass revalidate: 0 for always-fresh data.
  */
 export async function fetchPages(options: {
   type: "tip" | "project";
   maxCount?: number;
+  revalidate?: number;
 }): Promise<PageItem[]> {
   try {
     const base = getBaseUrl();
     const contractorId = getContractorId();
     const maxCount = options.maxCount ?? 100;
+    const revalidate = options.revalidate ?? 3600;
     const url = `${base}/api/v1/public/pages?contractor_id=${encodeURIComponent(contractorId)}&type=${options.type}&max_count=${maxCount}`;
-    const res = await fetch(url, { cache: "no-store" });
+    const fetchOpts: RequestInit = revalidate === 0
+      ? { cache: "no-store" }
+      : { next: { revalidate } };
+    const res = await fetch(url, fetchOpts);
     if (!res.ok) return [];
     const data = (await res.json()) as unknown;
     if (!Array.isArray(data)) return [];
@@ -83,14 +88,17 @@ export async function fetchPages(options: {
 }
 
 /**
- * Fetch a single page by slug.
+ * Fetch a single page by slug. Defaults to ISR revalidation every 3600 s.
  */
-export async function fetchPageBySlug(slug: string): Promise<PageItem | null> {
+export async function fetchPageBySlug(slug: string, revalidate = 3600): Promise<PageItem | null> {
   try {
     const base = getBaseUrl();
     const contractorId = getContractorId();
     const url = `${base}/api/v1/public/pages/${encodeURIComponent(slug)}?contractor_id=${encodeURIComponent(contractorId)}`;
-    const res = await fetch(url, { cache: "no-store" });
+    const fetchOpts: RequestInit = revalidate === 0
+      ? { cache: "no-store" }
+      : { next: { revalidate } };
+    const res = await fetch(url, fetchOpts);
     if (!res.ok) return null;
     const data = (await res.json()) as unknown;
     return parsePage(data);
