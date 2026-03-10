@@ -41,7 +41,7 @@ export function Footer() {
             </Text>
           </Stack>
           <Stack gap="xs">
-            <Title order={6} fw={600} c="dark">
+            <Title order={3} fw={600} c="dark">
               Contact
             </Title>
             <Text size="sm" c="dimmed">
@@ -52,7 +52,7 @@ export function Footer() {
             </Anchor>
           </Stack>
           <Stack gap="xs">
-            <Title order={6} fw={600} c="dark">
+            <Title order={3} fw={600} c="dark">
               Quick Links
             </Title>
             <Stack gap={4}>
@@ -66,7 +66,7 @@ export function Footer() {
             </Stack>
           </Stack>
           <Stack gap="xs">
-            <Title order={6} fw={600} c="dark">
+            <Title order={3} fw={600} c="dark">
               Follow Us
             </Title>
             <Group gap="sm">

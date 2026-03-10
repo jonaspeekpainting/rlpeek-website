@@ -285,7 +285,7 @@ export default async function HomePage() {
               </Button>
               <Link href="/contact-us">
                 <Button component="span" variant="outline" color="white" size="md">
-                  Request an Estimate
+                  Schedule a Free Estimate
                 </Button>
               </Link>
             </Box>
@@ -331,16 +331,16 @@ export default async function HomePage() {
           </Title>
           <Stack gap="lg" mt="xl">
             {recentTips.map(({ href, title, excerpt }) => (
-              <Link key={href} href={href} className="no-underline">
-                <Card withBorder className="transition hover:shadow-md [&:hover_h3]:text-[var(--mantine-color-brand-6)]">
-                  <Title order={3} size="h4" c="dark">
+              <Card key={href} withBorder className="transition hover:shadow-md [&:hover_h3]:text-[var(--mantine-color-brand-6)]">
+                <Title order={3} size="h4" c="dark">
+                  <Link href={href} className="no-underline">
                     {title}
-                  </Title>
-                  <Text size="sm" c="dimmed" mt="xs">
-                    {excerpt}
-                  </Text>
-                </Card>
-              </Link>
+                  </Link>
+                </Title>
+                <Text size="sm" c="dimmed" mt="xs">
+                  {excerpt}
+                </Text>
+              </Card>
             ))}
           </Stack>
           <Box mt="xl" style={{ display: "flex", justifyContent: "center" }}>
@@ -390,7 +390,7 @@ export default async function HomePage() {
             <Box style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16 }}>
               <Link href="/contact-us">
                 <Button component="span" variant="white" color="dark" size="md">
-                  Request an Estimate
+                  Get Your Free Estimate
                 </Button>
               </Link>
               <Button component="a" href={PHONE_LINK} variant="outline" color="white" size="md">
