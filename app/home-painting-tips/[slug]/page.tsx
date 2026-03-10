@@ -51,6 +51,14 @@ export default async function TipPage({ params }: Props) {
     description: page.description ?? "",
   };
 
+  const publishedDate = page.created_at
+    ? new Date(page.created_at).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : null;
+
   return (
     <>
       <div className="relative mx-auto max-w-3xl px-4 pt-10 sm:px-6">
@@ -75,6 +83,12 @@ export default async function TipPage({ params }: Props) {
           { label: titleDisplay.split("|")[0].trim() },
         ]}
       >
+        <p className="mt-3 text-sm text-zinc-500">
+          By <span className="font-medium text-zinc-700">RL Peek Painting</span>
+          {publishedDate && (
+            <> · <time dateTime={page.created_at}>{publishedDate}</time></>
+          )}
+        </p>
         <PageBodyContent body={page.body} className="prose prose-zinc max-w-none mt-6" pageTitle={titleDisplay.split("|")[0].trim()} />
       </PageContent>
       <div className="mx-auto max-w-3xl px-4 pb-10 sm:px-6 space-y-6">
@@ -101,7 +115,11 @@ export default async function TipPage({ params }: Props) {
             headline: titleDisplay.split("|")[0].trim(),
             description: page.description,
             url: `${SITE_URL}/home-painting-tips/${slug}`,
-            author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+            author: [
+            { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+            { "@type": "Person", name: "RL Peek Painting Team" },
+          ],
+          publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
             ...(page.created_at && { datePublished: new Date(page.created_at).toISOString() }),
             ...(page.updated_at && { dateModified: new Date(page.updated_at).toISOString() }),
           }),

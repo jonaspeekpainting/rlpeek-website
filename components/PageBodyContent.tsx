@@ -22,6 +22,18 @@ function normalizeBodyNewlines(body: string): string {
     .replace(/\\n/g, "\n");
 }
 
+/**
+ * Fix known content inconsistencies in API-sourced article bodies:
+ * - Normalize "R L Peek Painting" (with errant space) to "RL Peek Painting"
+ * - Remove legacy placeholder phrases left over from old content generation
+ */
+function sanitizeBodyText(body: string): string {
+  return body
+    .replace(/\bR\s+L\s+Peek\s+Painting\b/g, "RL Peek Painting")
+    .replace(/\bWith Our RL Peek Painting Company!?\s*/gi, "")
+    .trim();
+}
+
 /** If body starts with "# Title" where Title matches pageTitle, remove that line (and following blank) to avoid duplicating the page H1. */
 function stripDuplicateLeadingH1(body: string, pageTitle: string): string {
   if (!pageTitle?.trim()) return body;
@@ -38,8 +50,10 @@ function stripDuplicateLeadingH1(body: string, pageTitle: string): string {
 export function PageBodyContent({ body, className, pageTitle }: PageBodyContentProps) {
   if (!body) return null;
 
-  if (looksLikeHtml(body)) {
-    const sanitized = sanitizeHtml(body, {
+  const cleaned = sanitizeBodyText(body);
+
+  if (looksLikeHtml(cleaned)) {
+    const sanitized = sanitizeHtml(cleaned, {
       allowedTags: [
         "p", "br", "strong", "em", "u", "s", "code", "pre",
         "h1", "h2", "h3", "h4", "h5", "h6",
@@ -68,7 +82,7 @@ export function PageBodyContent({ body, className, pageTitle }: PageBodyContentP
     );
   }
 
-  let normalized = normalizeBodyNewlines(body);
+  let normalized = normalizeBodyNewlines(cleaned);
   if (pageTitle) normalized = stripDuplicateLeadingH1(normalized, pageTitle);
   return (
     <div className={className}>

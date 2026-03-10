@@ -16,16 +16,50 @@ export async function LocalBusinessJsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     telephone: PHONE,
+    description:
+      "RL Peek Painting is a Park City, Utah painting contractor serving Summit and Wasatch County since 1987. We provide interior and exterior painting, staining, drywall repair, cabinet refinishing, interior plastering, and specialty finishes.",
+    foundingDate: "1987",
+    founder: {
+      "@type": "Person",
+      name: "Bob Peek",
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: ADDRESS.street,
       addressLocality: ADDRESS.city,
       addressRegion: ADDRESS.region,
       postalCode: ADDRESS.postalCode,
+      addressCountry: "US",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 40.6461,
+      longitude: -111.498,
     },
     areaServed: AREAS_SERVED.map((name) => ({ "@type": "Place", name })),
     priceRange: "$$",
-    image: s3Image("images/logo.png"),
+    image: {
+      "@type": "ImageObject",
+      url: s3Image("images/logo.png"),
+    },
+    logo: {
+      "@type": "ImageObject",
+      url: s3Image("images/logo.png"),
+    },
+    sameAs: [
+      "https://www.facebook.com/PeekPainting",
+      "https://www.instagram.com/peekpainting/",
+      "https://www.linkedin.com/company/rl-peek-painting",
+      "https://www.houzz.com/pro/jonas-peek/rl-peek-painting"
+    ],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "17:00",
+      },
+    ],
   };
 
   if (reviewCount > 0 && ratingValue !== null) {
