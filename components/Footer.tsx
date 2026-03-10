@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Anchor, Box, Container, Group, SimpleGrid, Stack, Text, Title } from "@mantine/core";
-import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
+import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from "@tabler/icons-react";
 import { SITE_NAME, PHONE, PHONE_LINK, ADDRESS, s3Image } from "@/lib/site";
 
 const footerLinks = [
@@ -102,6 +102,17 @@ export function Footer() {
                 aria-label="LinkedIn"
               >
                 <IconBrandLinkedin size={28} stroke={1.5} />
+              </Anchor>
+              <Anchor
+                href="https://www.youtube.com/channel/UCTZLv2ZyYEihJa9nmFNBbNw"
+                target="_blank"
+                rel="noopener noreferrer"
+                component="a"
+                c="dimmed"
+                className="hover:text-dark transition-colors"
+                aria-label="YouTube"
+              >
+                <IconBrandYoutube size={28} stroke={1.5} />
               </Anchor>
             </Group>
           </Stack>

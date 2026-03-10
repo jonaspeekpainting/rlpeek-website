@@ -65,7 +65,8 @@ export async function LocalBusinessJsonLd() {
       "https://www.elocal.com/profile/23847374",
       "http://ezlocal.com/ut/park-city/painter/095242679",
       "https://www.cylex.us.com/company/rl-peek-painting-501527.html",
-      "https://maps.google.com/maps?cid=3210265639928281649"
+      "https://maps.google.com/maps?cid=3210265639928281649",
+      "https://www.youtube.com/channel/UCTZLv2ZyYEihJa9nmFNBbNw"
     ],
     openingHoursSpecification: [
       {
