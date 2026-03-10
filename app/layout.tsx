@@ -3,12 +3,14 @@ import "@mantine/tiptap/styles.css";
 
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Suspense } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from "@mantine/core";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { EstimateRequestModal } from "@/components/EstimateRequestModal";
 import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
+import { MarketingSourceCapture } from "@/components/MarketingSourceCapture";
 import { SITE_NAME, SITE_URL, s3Image } from "@/lib/site";
 import { theme } from "@/lib/theme";
 import "./globals.css";
@@ -82,6 +84,9 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <MantineProvider theme={theme} defaultColorScheme="light">
+          <Suspense fallback={null}>
+            <MarketingSourceCapture />
+          </Suspense>
           <Header />
           <main className="min-h-[60vh]">{children}</main>
           <Footer />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Alert,
   Button,
@@ -15,6 +15,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { JOBSUITE_API_BASE, JOBSUITE_CONTRACTOR_ID } from "@/lib/site";
+import { MARKETING_SOURCE_STORAGE_KEY } from "@/components/MarketingSourceCapture";
 
 const REFERRAL_OPTIONS = [
   { value: "", label: "Please select..." },
@@ -25,10 +26,29 @@ const REFERRAL_OPTIONS = [
   { value: "trucks", label: "Saw Your Trucks in the Neighborhood" },
   { value: "yard_sign", label: "Yard Sign" },
   { value: "google", label: "Google Search" },
+  { value: "google-ads", label: "Google Ads" },
+  { value: "youtube", label: "YouTube" },
   { value: "facebook", label: "Facebook" },
   { value: "instagram", label: "Instagram" },
   { value: "other", label: "Other" },
 ];
+
+/** Maps URL source param (e.g. "google-vision") to REFERRAL_OPTIONS value */
+const SOURCE_TO_REFERRAL: Record<string, string> = {
+  google: "google",
+  google_vision: "google-ads",
+  google_phone_leads: "google-ads",
+  google_search: "google",
+  facebook: "facebook",
+  instagram: "instagram",
+  social_media: "social_media",
+  past_customer: "past_customer",
+  referral: "referral",
+  postcard: "postcard",
+  trucks: "trucks",
+  yard_sign: "yard_sign",
+  other: "other",
+};
 
 const JOB_TYPE_OPTIONS = [
   { value: "", label: "Please select..." },
@@ -57,9 +77,24 @@ const INITIAL = {
 
 export function ContactForm() {
   const [values, setValues] = useState(INITIAL);
+  const [referralSourceLocked, setReferralSourceLocked] = useState(false);
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState<{ type: "success" | "error"; message: string } | null>(null);
   const [bookingOpened, { open: openBooking, close: closeBooking }] = useDisclosure(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const raw = sessionStorage.getItem(MARKETING_SOURCE_STORAGE_KEY);
+      if (!raw || !raw.trim()) return;
+      const normalized = raw.trim().toLowerCase().replace(/-/g, "_");
+      const referralValue = SOURCE_TO_REFERRAL[normalized] ?? "other";
+      setValues((prev) => ({ ...prev, referralSource: referralValue }));
+      setReferralSourceLocked(true);
+    } catch {
+      // ignore
+    }
+  }, []);
 
   const showReferralName = values.referralSource === "referral";
 
@@ -130,7 +165,9 @@ export function ContactForm() {
         throw new Error(detail);
       }
 
-      setValues(INITIAL);
+      setValues((prev) =>
+        referralSourceLocked ? { ...INITIAL, referralSource: prev.referralSource } : INITIAL
+      );
       setAlert({ type: "success", message: "Form submitted successfully!" });
       openBooking();
     } catch (err) {
@@ -279,6 +316,8 @@ export function ContactForm() {
             value={values.referralSource || null}
             onChange={setSelect("referralSource")}
             placeholder="Please select..."
+            disabled={referralSourceLocked}
+            title={referralSourceLocked ? "Set from your visit link" : undefined}
           />
 
           {showReferralName && (
