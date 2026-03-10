@@ -50,7 +50,22 @@ export async function LocalBusinessJsonLd() {
       "https://www.facebook.com/PeekPainting",
       "https://www.instagram.com/peekpainting/",
       "https://www.linkedin.com/company/rl-peek-painting",
-      "https://www.houzz.com/pro/jonas-peek/rl-peek-painting"
+      "https://www.houzz.com/pro/jonas-peek/rl-peek-painting",
+      "https://www.8coupons.com/stores/local/rl-peek-painting-park-city-84060-5165-2008746520",
+      "https://maps.apple.com/place?auid=13527829268406751179",
+      "http://www.yext.com/partnerpages/aroundme/r-l-peek-painting-park-city-utah-us-8e41ca",
+      "http://www.bing.com/maps?ss=ypid.YNEC27C15AB015C048&amp;mkt=en-US",
+      "https://www.brownbook.net/business/53736225/rl-peek-painting/",
+      "https://us.centralindex.com/company/500523963400192",
+      "https://www.chamberofcommerce.com/business-directory/utah/park-city/painter/11792947-rl-peek-painting",
+      "https://www.insiderpages.com/profile/23847374",
+      "https://citysquares.com/b/rl-peek-painting-13589135",
+      "https://www.cylex.us.com/company/rl-peek-painting-501527.html",
+      "http://www.dexknows.com/park-city-ut/bp/r-l-peek-painting-7818708",
+      "https://www.elocal.com/profile/23847374",
+      "http://ezlocal.com/ut/park-city/painter/095242679",
+      "https://www.cylex.us.com/company/rl-peek-painting-501527.html",
+      "https://maps.google.com/maps?cid=3210265639928281649"
     ],
     openingHoursSpecification: [
       {
