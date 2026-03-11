@@ -8,6 +8,10 @@ import { AsyncRecentProjectsCarousel } from "@/components/AsyncRecentProjectsCar
 import { AsyncReviewsSection } from "@/components/AsyncReviewsSection";
 import { YouTubeFacade } from "@/components/YouTubeFacade";
 
+// Tiny dark placeholder for hero; shows instantly while the banner image loads
+const HERO_BLUR =
+  "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAEAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/2gAMAwEAAhEDEQA/AL8A/9k=";
+
 const services = [
   { href: "/services/interior-services/drywall-repair", label: "Sheetrock Repair" },
   { href: "/services/interior-services/painting", label: "Interior Painting" },
@@ -132,6 +136,8 @@ export default async function HomePage() {
           className="object-cover"
           priority
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL={HERO_BLUR}
         />
         <Box
           pos="absolute"
