@@ -36,7 +36,7 @@ export function ReviewsSection({
   columns = { base: 1, sm: 3 },
   showViewAll = false,
   viewAllHref = "/reviews",
-  viewAllLabel = "Read More Reviews",
+  viewAllLabel = "See All Client Reviews",
 }: ReviewsSectionProps) {
   const items = reviews.slice(0, maxItems);
   if (items.length === 0) return null;

@@ -193,7 +193,7 @@ export default async function HomePage() {
                 size="md"
                 style={{ width: "100%", maxWidth: 400 }}
               >
-                Learn More About Us
+                About RL Peek Painting
               </Button>
             </Link>
           </Stack>
@@ -220,6 +220,7 @@ export default async function HomePage() {
             <iframe
               src="https://www.youtube.com/embed/yRXdkSUL4Ps"
               title="RL Peek Painting"
+              loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               style={{
@@ -265,7 +266,7 @@ export default async function HomePage() {
                 size="md"
                 style={{ width: "100%", maxWidth: 400 }}
               >
-                More About Our Services
+                View All Painting Services
               </Button>
             </Link>
           </Stack>
@@ -303,7 +304,7 @@ export default async function HomePage() {
             columns={{ base: 1, sm: 3 }}
             showViewAll
             viewAllHref="/reviews"
-            viewAllLabel="Read More Reviews"
+            viewAllLabel="See All Client Reviews"
           />
         </Container>
       </Box>

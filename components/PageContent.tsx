@@ -280,7 +280,7 @@ export function cleanServiceText(raw: string): string {
     .replace(/\s*\[\.\.\.\]\s*/g, " ")
     .replace(/\s*\[\.\.\.\s*\]\s*/g, " ")
     .replace(/\s*\[\s*\.\.\.\s*\]\s*/g, " ")
-    .replace(/\s*Read More Reviews\s*/gi, " [Read more reviews](/reviews). ")
+    .replace(/\s*Read More Reviews\s*/gi, " [View our reviews](/reviews). ")
     .replace(/\s*Contact Us\s*\n?\s*Call Us Today\s*$/gi, "")
     .replace(/\t/g, " ")
     .replace(/\n\s*\n\s*\n+/g, "\n\n")

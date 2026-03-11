@@ -61,9 +61,10 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript defaultColorScheme="light" />
         <LocalBusinessJsonLd />
+        <link rel="preconnect" href="https://rl-peek-public-resources.s3.us-east-1.amazonaws.com" crossOrigin="anonymous" />
         <Script
           id="gtag-init"
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -75,7 +76,7 @@ export default function RootLayout({
         />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           async
         />
       </head>

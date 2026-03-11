@@ -56,7 +56,7 @@ export default async function ContactUsPage() {
               columns={{ base: 1 }}
               showViewAll
               viewAllHref="/reviews"
-              viewAllLabel="Read More Reviews"
+              viewAllLabel="Read Our Google Reviews"
             />
           </GridCol>
         </Grid>
