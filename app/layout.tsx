@@ -1,5 +1,4 @@
 import "@mantine/core/styles.css";
-import "@mantine/tiptap/styles.css";
 
 import type { Metadata } from "next";
 import Script from "next/script";
@@ -8,7 +7,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from "@mantine/core";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { EstimateRequestModal } from "@/components/EstimateRequestModal";
+import { LazyEstimateRequestModal } from "@/components/LazyEstimateRequestModal";
 import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
 import { MarketingSourceCapture } from "@/components/MarketingSourceCapture";
 import { SITE_NAME, SITE_URL, s3Image } from "@/lib/site";
@@ -91,7 +90,7 @@ export default function RootLayout({
           <Header />
           <main className="min-h-[60vh]">{children}</main>
           <Footer />
-          <EstimateRequestModal />
+          <LazyEstimateRequestModal />
         </MantineProvider>
       </body>
     </html>

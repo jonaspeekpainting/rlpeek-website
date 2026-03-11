@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { Box, Container, Title, Text, Button, Card, SimpleGrid, Stack } from "@mantine/core";
 import Image from "next/image";
 import { PHONE_LINK, SITE_NAME, SITE_URL, s3Image } from "@/lib/site";
-import { getGoogleReviews } from "@/lib/googleReviews";
-import { fetchPages } from "@/lib/pagesApi";
-import { RecentProjectsCarousel } from "@/components/RecentProjectsCarousel";
-import { ReviewsSection } from "@/components/ReviewsSection";
+import { AsyncRecentProjectsCarousel } from "@/components/AsyncRecentProjectsCarousel";
+import { AsyncReviewsSection } from "@/components/AsyncReviewsSection";
+import { YouTubeFacade } from "@/components/YouTubeFacade";
 
 const services = [
   { href: "/services/interior-services/drywall-repair", label: "Sheetrock Repair" },
@@ -121,10 +121,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function HomePage() {
-  const [reviews, projects] = await Promise.all([
-    getGoogleReviews({ minRating: 5, maxCount: 3 }),
-    fetchPages({ type: "project", maxCount: 3 }),
-  ]);
   return (
     <>
       {/* Hero: full-width image + dark overlay + headline + CTA */}
@@ -200,39 +196,13 @@ export default async function HomePage() {
         </Container>
       </Box>
 
-      {/* YouTube video */}
+      {/* YouTube video - click to load (saves ~15+ requests until play) */}
       <Box py={{ base: "xl", sm: "2xl" }} bg="gray.0">
         <Container size="lg">
           <Title order={2} size="h2" fw={700} c="dark" mb="lg">
             See Us in Action
           </Title>
-          <Box
-            component="div"
-            style={{
-              position: "relative",
-              paddingBottom: "56.25%",
-              height: 0,
-              overflow: "hidden",
-              maxWidth: "100%",
-              borderRadius: 8,
-            }}
-          >
-            <iframe
-              src="https://www.youtube.com/embed/yRXdkSUL4Ps"
-              title="RL Peek Painting"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                border: 0,
-              }}
-            />
-          </Box>
+          <YouTubeFacade />
         </Container>
       </Box>
 
@@ -294,33 +264,43 @@ export default async function HomePage() {
         </Container>
       </Box>
 
-      {/* Reviews */}
+      {/* Reviews - streamed when ready */}
       <Box py={{ base: "xl", sm: "2xl" }}>
         <Container size="lg">
-          <ReviewsSection
-            reviews={reviews}
-            title="What Our Clients Are Saying"
-            maxItems={3}
-            columns={{ base: 1, sm: 3 }}
-            showViewAll
-            viewAllHref="/reviews"
-            viewAllLabel="See All Client Reviews"
-          />
+          <Suspense
+            fallback={
+              <Box py="xl" style={{ minHeight: 200 }}>
+                <div style={{ height: 24, width: 240, background: "var(--mantine-color-gray-2)", borderRadius: 4, marginBottom: 16 }} />
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} style={{ height: 140, background: "var(--mantine-color-gray-1)", borderRadius: 8 }} />
+                  ))}
+                </div>
+              </Box>
+            }
+          >
+            <AsyncReviewsSection />
+          </Suspense>
         </Container>
       </Box>
 
-      {/* Recent Projects carousel */}
+      {/* Recent Projects carousel - streamed when ready */}
       <Box py={{ base: "xl", sm: "2xl" }} bg="gray.0">
         <Container size="lg">
-          <RecentProjectsCarousel
-            projects={projects}
-            title="Recent Projects"
-            maxItems={3}
-            columns={{ base: 1, sm: 3 }}
-            showViewAll
-            viewAllHref="/latest-projects"
-            viewAllLabel="View All Projects"
-          />
+          <Suspense
+            fallback={
+              <Box py="xl" style={{ minHeight: 200 }}>
+                <div style={{ height: 24, width: 180, background: "var(--mantine-color-gray-2)", borderRadius: 4, marginBottom: 16 }} />
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} style={{ height: 180, background: "var(--mantine-color-gray-1)", borderRadius: 8 }} />
+                  ))}
+                </div>
+              </Box>
+            }
+          >
+            <AsyncRecentProjectsCarousel />
+          </Suspense>
         </Container>
       </Box>
 

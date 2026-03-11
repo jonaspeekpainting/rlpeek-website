@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   experimental: {
-    optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
+    optimizePackageImports: ["@mantine/core", "@mantine/hooks", "@tabler/icons-react"],
   },
   async redirects() {
     // Application-level fallback. Primary redirect is in Amplify customRules.
