@@ -115,6 +115,15 @@ export function Footer() {
                 <IconBrandYoutube size={28} stroke={1.5} />
               </Anchor>
             </Group>
+            <Box mt="xs" maw={200}>
+              <Image
+                src="/images/PCCOC_partner.jpg"
+                alt="Proud Partner of Park City, UT"
+                width={200}
+                height={80}
+                className="h-auto w-full object-contain"
+              />
+            </Box>
           </Stack>
         </SimpleGrid>
         <Box mt="xl" pt="lg" style={{ borderTop: "1px solid var(--mantine-color-gray-2)" }}>
