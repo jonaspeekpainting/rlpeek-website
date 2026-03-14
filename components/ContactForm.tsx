@@ -81,6 +81,9 @@ export function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState<{ type: "success" | "error"; message: string } | null>(null);
   const [bookingOpened, { open: openBooking, close: closeBooking }] = useDisclosure(false);
+  const [lastCreatedEstimateId, setLastCreatedEstimateId] = useState<string | null>(null);
+  const [markScheduledLoading, setMarkScheduledLoading] = useState(false);
+  const [markScheduledDone, setMarkScheduledDone] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -164,6 +167,11 @@ export function ContactForm() {
         const detail = typeof errorData.detail === "string" ? errorData.detail : "Failed to submit form.";
         throw new Error(detail);
       }
+
+      const data = await response.json();
+      const estimateId = typeof data?.estimate_id === "string" ? data.estimate_id : null;
+      setLastCreatedEstimateId(estimateId);
+      setMarkScheduledDone(false);
 
       setValues((prev) =>
         referralSourceLocked ? { ...INITIAL, referralSource: prev.referralSource } : INITIAL
@@ -367,15 +375,45 @@ export function ContactForm() {
         size="xl"
         centered
       >
-        <div style={{ position: "relative", paddingBottom: "75%", height: 0, overflow: "hidden" }}>
-          <iframe
-            title="Google Calendar Appointment Scheduling"
-            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3TbCNUdus5M5DNEJnhoywoleYeS4d6D7xbPhy2FrQ8NnCZ40jsaa0FASHP4ydfOuER44K1SbCs?gv=true"
-            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
+        <Stack gap="md">
+          <div style={{ position: "relative", paddingBottom: "75%", height: 0, overflow: "hidden" }}>
+            <iframe
+              title="Google Calendar Appointment Scheduling"
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3TbCNUdus5M5DNEJnhoywoleYeS4d6D7xbPhy2FrQ8NnCZ40jsaa0FASHP4ydfOuER44K1SbCs?gv=true"
+              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          {lastCreatedEstimateId && (
+            <>
+              <Text size="sm" c="dimmed">
+                After you pick a time in the calendar above, click below so we can mark your estimate as scheduled.
+              </Text>
+              <Button
+                variant="light"
+                loading={markScheduledLoading}
+                disabled={markScheduledDone}
+                onClick={async () => {
+                  setMarkScheduledLoading(true);
+                  try {
+                    const res = await fetch(
+                      `${JOBSUITE_API_BASE}/api/v1/public/estimates/${lastCreatedEstimateId}/mark-scheduled`,
+                      { method: "POST" }
+                    );
+                    if (res.ok) {
+                      setMarkScheduledDone(true);
+                    }
+                  } finally {
+                    setMarkScheduledLoading(false);
+                  }
+                }}
+              >
+                {markScheduledDone ? "Marked as scheduled" : "I've scheduled my appointment"}
+              </Button>
+            </>
+          )}
+        </Stack>
       </Modal>
     </>
   );
